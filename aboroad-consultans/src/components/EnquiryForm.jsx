@@ -21,16 +21,19 @@ const Label = styled.label`
 `;
 
 const Input = styled.input`
-  padding: 10px;
+  padding: 15px;
   margin-bottom: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
 `;
 
 const TextArea = styled.textarea`
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
+  width:100%;
 `;
 
 const Button = styled.button`
