@@ -31,12 +31,12 @@ const Navbar = () => {
   return (
     <Nav>
       <Container>
-        <Brand>E-Commerce</Brand>
-        <NavList>
+        <Brand>Study-Abroad</Brand>
+        {/* <NavList>
           <NavItem>Home</NavItem>
           <NavItem>Products</NavItem>
           <NavItem>Contact</NavItem>
-        </NavList>
+        </NavList> */}
       </Container>
     </Nav>
   );

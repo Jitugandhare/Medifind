@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 const images = [
-  'https://via.placeholder.com/800x300?text=Image+1',
-  'https://via.placeholder.com/800x300?text=Image+2',
-  'https://via.placeholder.com/800x300?text=Image+3'
+    'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg',
+    'https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg',
+    'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg',
+    'https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg',
+
 ];
 
 const BannerWrapper = styled.div`
@@ -13,25 +15,26 @@ const BannerWrapper = styled.div`
 `;
 
 const BannerImage = styled.img`
-  width: 100%;
-  height: auto;
+  width: 30%;
+  max-height: 2%;
+  object-fit: cover;
 `;
 
 const Banner = () => {
-  const [currentImage, setCurrentImage] = useState(0);
+    const [currentImage, setCurrentImage] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prevImage) => (prevImage + 1) % images.length);
-    }, 2000);
-    return () => clearInterval(interval);
-  }, []);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImage((prevImage) => (prevImage + 1) % images.length);
+        }, 2000);
+        return () => clearInterval(interval);
+    }, []);
 
-  return (
-    <BannerWrapper>
-      <BannerImage src={images[currentImage]} alt="Banner" />
-    </BannerWrapper>
-  );
+    return (
+        <BannerWrapper>
+            <BannerImage src={images[currentImage]} alt="Banner" />
+        </BannerWrapper>
+    );
 };
 
 export default Banner;
