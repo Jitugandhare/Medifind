@@ -1,74 +1,82 @@
 import React from 'react';
-import styled from 'styled-components';
+import { Container, TextField, Button, Typography, Box } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-const FormWrapper = styled.div`
-  padding: 20px;
-  margin: 20px;
-  border: 1px solid #ddd;
-`;
-
-const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-`;
-
-const FormGroup = styled.div`
-  margin-bottom: 15px;
-`;
-
-const Label = styled.label`
-  margin-bottom: 5px;
-`;
-
-const Input = styled.input`
-  padding: 15px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 16px;
-  width: 90%;
-`;
-
-const TextArea = styled.textarea`
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  width:90%;
-`;
-
-const Button = styled.button`
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #0056b3;
-  }
-`;
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#2a635c',
+    },
+  },
+  typography: {
+    h4: {
+      marginBottom: '20px',
+    },
+  },
+});
 
 const EnquiryForm = () => {
   return (
-    <FormWrapper>
-      <h2>Enquiry Form</h2>
-      <Form>
-        <FormGroup>
-          <Label>Name</Label>
-          <Input type="text" />
-        </FormGroup>
-        <FormGroup>
-          <Label>Email</Label>
-          <Input type="email" />
-        </FormGroup>
-        <FormGroup>
-          <Label>Message</Label>
-          <TextArea rows="4"></TextArea>
-        </FormGroup>
-        <Button type="submit">Submit</Button>
-      </Form>
-    </FormWrapper>
+    <ThemeProvider theme={theme}>
+      <Container maxWidth="sm">
+        <Box
+          sx={{
+            marginTop: 8,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            boxShadow: 3,
+            padding: 3,
+            borderRadius: 2,
+            backgroundColor: 'white',
+          }}
+        >
+          <Typography component="h1" variant="h4">
+            Enquiry Form
+          </Typography>
+          <Box component="form" noValidate sx={{ mt: 1 }}>
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              id="name"
+              label="Name"
+              name="name"
+              autoComplete="name"
+              autoFocus
+            />
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              id="email"
+              label="Email Address"
+              name="email"
+              autoComplete="email"
+            />
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              name="message"
+              label="Message"
+              id="message"
+              multiline
+              rows={4}
+            />
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+              sx={{ mt: 3, mb: 2 }}
+            >
+              Submit
+            </Button>
+          </Box>
+        </Box>
+      </Container>
+    </ThemeProvider>
   );
 };
 

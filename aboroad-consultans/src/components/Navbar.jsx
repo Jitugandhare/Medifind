@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Logo from '../Assets/logo/WhatsApp Image 2024-06-17 at 12.44.23 PM (1).jpeg';
 
 const Nav = styled.nav`
-  background-color: #000080;
+  background-color: #3c5281;
   color: white;
   padding: 10px;
 `;
@@ -45,6 +45,22 @@ const NavItem = styled.li`
     text-decoration: underline;
   }
 `;
+const Button = styled.button`
+padding: 10px 20px;
+  background-color: white;
+  color: #2a635c;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: #2a635c;
+    color: white;
+  }
+
+`
 
 const Navbar = () => {
   return (
@@ -59,6 +75,7 @@ const Navbar = () => {
           <NavItem>Products</NavItem>
           <NavItem>Contact</NavItem>
         </NavList> */}
+        <Button>Book your consultation</Button>
       </Container>
     </Nav>
   );

@@ -1,4 +1,5 @@
 import React from 'react';
+import CssBaseline from '@mui/material/CssBaseline';
 import styled from 'styled-components';
 import Navbar from './components/Navbar';
 import Banner from './components/Banner';
@@ -76,7 +77,9 @@ const App = () => {
           </CardDeck>
         </Container>
       </ProductsSection>
+      {/* <CssBaseline /> */}
       <EnquiryForm />
+      
       <Footer />
     </AppWrapper>
   );
