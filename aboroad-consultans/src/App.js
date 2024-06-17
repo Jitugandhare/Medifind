@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import styled from 'styled-components';
 import Navbar from './components/Navbar';
@@ -7,26 +7,31 @@ import ProductCard from './components/ProductCard';
 import EnquiryForm from './components/EnquiryForm';
 import Footer from './components/Footer';
 import product1Image from './Assets/image-1.jpeg';
+import product2Image from './Assets/image-2.jpeg';
+import product3Image from './Assets/image-3.jpeg';
+import product4Image from './Assets/image-4.jpeg';
+import product5Image from './Assets/image-5.jpeg';
+import product6Image from './Assets/image-6.jpeg';
 
 const products = [
   {
     image: product1Image,
-    
-  },{
-    image: product1Image,
-    
-  },{
-    image: product1Image,
-    
-  },{
-    image: product1Image,
-    
-  },{
-    image: product1Image,
-    
-  },{
-    image: product1Image,
-    
+
+  }, {
+    image: product2Image,
+
+  }, {
+    image: product3Image,
+
+  }, {
+    image: product4Image,
+
+  }, {
+    image: product5Image,
+
+  }, {
+    image: product6Image,
+
   }
 ];
 
@@ -58,9 +63,14 @@ const CardDeck = styled.div`
 
 
 const App = () => {
+  const [showEnquiryForm, setShowEnquiryForm] = useState(false);
+
+  const handleEnquiryFormToggle = () => {
+    setShowEnquiryForm((prev) => !prev);
+  };
   return (
     <AppWrapper>
-      <Navbar />
+      <Navbar onEnquiryFormToggle={handleEnquiryFormToggle} />
       <Banner />
       <ProductsSection>
         <Container>
@@ -79,7 +89,8 @@ const App = () => {
       </ProductsSection>
       {/* <CssBaseline /> */}
       <EnquiryForm />
-      
+      <CssBaseline />
+
       <Footer />
     </AppWrapper>
   );

@@ -1,9 +1,38 @@
 import React from 'react';
 import styled from 'styled-components';
-import Logo from '../Assets/logo/WhatsApp Image 2024-06-17 at 12.44.23 PM (1).jpeg';
+import Logo from '../Assets/logo/logo-1.png';
+
+
+
+const Navbar = ({ onEnquiryFormToggle }) => {
+
+
+
+  return (
+    <Nav>
+      <Container>
+        <Brand>
+          <LogoImage src={Logo} alt="Logo" />
+          {/* <BrandName>Brand Name</BrandName> */}
+        </Brand>
+        {/* <NavList>
+          <NavItem>Home</NavItem>
+          <NavItem>Products</NavItem>
+          <NavItem>Contact</NavItem>
+        </NavList> */}
+        <Button onClick={onEnquiryFormToggle}>Book your consultation</Button>
+      </Container>
+    </Nav>
+  );
+};
+
+export default Navbar;
+
+
+
 
 const Nav = styled.nav`
-  background-color: #3c5281;
+  background-color: 	#81b1ce;
   color: white;
   padding: 10px;
 `;
@@ -23,7 +52,7 @@ const LogoImage = styled.img`
   height: 80px;
   margin-right: 10px;
   border-radius:15px;
-  width: 100px;
+  width: 200px;
 `;
 
 const BrandName = styled.h1`
@@ -61,24 +90,3 @@ padding: 10px 20px;
   }
 
 `
-
-const Navbar = () => {
-  return (
-    <Nav>
-      <Container>
-        <Brand>
-          <LogoImage src={Logo} alt="Logo" />
-          {/* <BrandName>Brand Name</BrandName> */}
-        </Brand>
-        {/* <NavList>
-          <NavItem>Home</NavItem>
-          <NavItem>Products</NavItem>
-          <NavItem>Contact</NavItem>
-        </NavList> */}
-        <Button>Book your consultation</Button>
-      </Container>
-    </Nav>
-  );
-};
-
-export default Navbar;
