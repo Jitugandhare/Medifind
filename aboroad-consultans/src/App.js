@@ -5,22 +5,27 @@ import Banner from './components/Banner';
 import ProductCard from './components/ProductCard';
 import EnquiryForm from './components/EnquiryForm';
 import Footer from './components/Footer';
+import product1Image from './Assets/image-1.jpeg';
 
 const products = [
   {
-    image: 'https://via.placeholder.com/200',
-    title: 'Product 1',
-    description: 'This is a description of product 1.'
-  },
-  {
-    image: 'https://via.placeholder.com/200',
-    title: 'Product 2',
-    description: 'This is a description of product 2.'
-  },
-  {
-    image: 'https://via.placeholder.com/200',
-    title: 'Product 3',
-    description: 'This is a description of product 3.'
+    image: product1Image,
+    
+  },{
+    image: product1Image,
+    
+  },{
+    image: product1Image,
+    
+  },{
+    image: product1Image,
+    
+  },{
+    image: product1Image,
+    
+  },{
+    image: product1Image,
+    
   }
 ];
 
@@ -46,7 +51,10 @@ const CardDeck = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 `;
+
 
 const App = () => {
   return (

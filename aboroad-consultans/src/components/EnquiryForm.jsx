@@ -26,14 +26,14 @@ const Input = styled.input`
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 16px;
-  width: 100%;
+  width: 90%;
 `;
 
 const TextArea = styled.textarea`
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  width:100%;
+  width:90%;
 `;
 
 const Button = styled.button`

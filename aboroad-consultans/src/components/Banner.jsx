@@ -12,11 +12,13 @@ const images = [
 const BannerWrapper = styled.div`
   text-align: center;
   margin: 20px 0;
+//   border: 1px solid red;
 `;
 
 const BannerImage = styled.img`
   width: 30%;
-  max-height: 2%;
+  height: 100%
+
   object-fit: cover;
 `;
 
