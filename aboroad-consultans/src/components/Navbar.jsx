@@ -48,7 +48,7 @@ const Brand = styled.div`
 `;
 
 const LogoImage = styled.img`
-  height: 80px;
+  height: 70px;
   margin-right: 10px;
   border-radius: 15px;
   width: 200px;

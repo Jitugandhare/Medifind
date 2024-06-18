@@ -1,22 +1,48 @@
+// Banner.js
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-
-const images = [
-  'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg',
-  'https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg',
-  'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg',
-  'https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg',
-];
+import { slideData } from './SlideData';
 
 const BannerWrapper = styled.div`
   text-align: center;
-  margin: 20px 0;
+  margin: 2px;
 `;
 
 const BannerImage = styled.img`
-  width: 30%;
+  width: 100%;
   height: auto;
   object-fit: cover;
+`;
+
+const ContentWrapper = styled.div`
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  // background-color: rgba(0, 0, 0, 0.5); /* Optional: For better text visibility */
+  padding: 10px;
+  border-radius: 5px;
+`;
+
+const Button = styled.button`
+  padding: 10px 20px;
+  background-color: #2a635c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #1d473f;
+  }
+`;
+
+const Paragraph = styled.p`
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: black;
 `;
 
 const DotsWrapper = styled.div`
@@ -39,16 +65,23 @@ const Banner = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImage((prevImage) => (prevImage + 1) % images.length);
-    }, 2000);
+      setCurrentImage((prevImage) => (prevImage + 1) % slideData.length);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
+  const { image, buttonText, paragraphText } = slideData[currentImage];
+
   return (
     <BannerWrapper>
-      <BannerImage src={images[currentImage]} alt="Banner" />
+      <BannerImage src={image} alt="Banner" />
+      <ContentWrapper>
+        <Paragraph>{paragraphText}</Paragraph>
+        <Button>{buttonText}</Button>
+
+      </ContentWrapper>
       <DotsWrapper>
-        {images.map((_, index) => (
+        {slideData.map((_, index) => (
           <Dot key={index} active={index === currentImage} />
         ))}
       </DotsWrapper>
