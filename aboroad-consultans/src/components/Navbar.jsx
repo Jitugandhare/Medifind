@@ -1,12 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 import Logo from '../Assets/logo/logo-1.png';
 
+const Navbar = () => {
+  
 
-
-const Navbar = ({ onEnquiryFormToggle }) => {
-
-
+  const handleButtonClick = () => {
+    
+  };
 
   return (
     <Nav>
@@ -20,7 +22,7 @@ const Navbar = ({ onEnquiryFormToggle }) => {
           <NavItem>Products</NavItem>
           <NavItem>Contact</NavItem>
         </NavList> */}
-        <Button onClick={onEnquiryFormToggle}>Book your consultation</Button>
+        <Button onClick={handleButtonClick}>Book your consultation</Button>
       </Container>
     </Nav>
   );
@@ -28,11 +30,8 @@ const Navbar = ({ onEnquiryFormToggle }) => {
 
 export default Navbar;
 
-
-
-
 const Nav = styled.nav`
-  background-color: 	#81b1ce;
+  background-color: #81b1ce;
   color: white;
   padding: 10px;
 `;
@@ -51,7 +50,7 @@ const Brand = styled.div`
 const LogoImage = styled.img`
   height: 80px;
   margin-right: 10px;
-  border-radius:15px;
+  border-radius: 15px;
   width: 200px;
 `;
 
@@ -74,8 +73,9 @@ const NavItem = styled.li`
     text-decoration: underline;
   }
 `;
+
 const Button = styled.button`
-padding: 10px 20px;
+  padding: 10px 20px;
   background-color: white;
   color: #2a635c;
   border: none;
@@ -88,5 +88,4 @@ padding: 10px 20px;
     background-color: #2a635c;
     color: white;
   }
-
-`
+`;
