@@ -8,7 +8,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: white;
     padding: 10px 20px;
 }
 
@@ -179,6 +179,60 @@ body {
 .dot.active {
     background-color: rgba(0, 0, 0, 0.8);
 }
+
+/* why houseofai */
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.grid-item img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.grid-item p {
+    margin: 0;
+    font-size: 1em;
+    color: #333;
+}
+
+.grid-item:hover {
+    transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 
 
 

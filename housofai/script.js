@@ -92,6 +92,37 @@ document.getElementById('enquiryForm').addEventListener('submit', function(event
     }
 });
 
+// why housofai
+
+document.addEventListener('DOMContentLoaded', function() {
+    const cardData = [
+        { imgSrc: 'path/to/expert-counsellors.png', text: 'Expert Counsellors' },
+        { imgSrc: 'path/to/years-experience.png', text: '20 Years’ Experience' },
+        { imgSrc: 'path/to/successful-applications.png', text: '100 Percent Successful Applications' },
+        { imgSrc: 'path/to/acceptance-rates.png', text: 'Highest Acceptance Rates' },
+        { imgSrc: 'path/to/students-counselled.png', text: '15000+ Students Counselled' },
+        { imgSrc: 'path/to/personalised-attention.png', text: 'Personalised Attention' },
+    ];
+
+    const gridContainer = document.querySelector('.grid-container');
+
+    cardData.forEach(data => {
+        const gridItem = document.createElement('div');
+        gridItem.className = 'grid-item';
+        
+        const img = document.createElement('img');
+        img.src = data.imgSrc;
+        img.alt = data.text;
+        
+        const p = document.createElement('p');
+        p.textContent = data.text;
+
+        gridItem.appendChild(img);
+        gridItem.appendChild(p);
+        
+        gridContainer.appendChild(gridItem);
+    });
+});
 
 
 
