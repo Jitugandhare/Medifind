@@ -91,3 +91,15 @@ document.getElementById('enquiryForm').addEventListener('submit', function(event
         alert('Please fill in all fields.');
     }
 });
+
+
+
+
+
+// foooter section
+
+document.addEventListener('DOMContentLoaded', function() {
+    const yearSpan = document.createElement('span');
+    yearSpan.textContent = new Date().getFullYear();
+    document.querySelector('.footer').appendChild(yearSpan);
+});
