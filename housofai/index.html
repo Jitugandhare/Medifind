@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Bar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+   <!-- nav bar section -->
+    <nav class="navbar">
+        <div class="brand-title"><img src="/housofai/images/logo-1.png" alt=""></div>
+        <!-- <a href="javascript:void(0);" class="toggle-button" onclick="toggleMenu()">
+            &#9776; -->
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <!-- <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li> -->
+                <li><button class="btn">Book your consultation</button></li>
+            </ul>
+            
+        </div>
+    </nav>
+
+
+    <!-- banner imageslider section -->
+
+    <!-- <div>
+      <img src="images/banner-bg.png" alt="err">
+    </div> -->
+    <div class="slider">
+      <div class="slides">
+          <div class="slide"><img src="/housofai/images/banner-bg.png" alt="Slide 1"></div>
+          <div class="slide"><img src="/housofai/images/banner-bg.png" alt="Slide 2"></div>
+          <div class="slide"><img src="/housofai/images/banner-bg.png" alt="Slide 3"></div>
+      </div>
+      
+  </div>
+  
+  <div class="dots">
+   <span class="dot" onclick="currentSlide(0)"></span>
+   <span class="dot" onclick="currentSlide(1)"></span>
+   <span class="dot" onclick="currentSlide(2)"></span>
+</div>
+
+<!-- cards container -->
+<h1 id="cards">Products</h1>
+<div class="card-container" id="card-container">
+   <!-- Cards will be dynamically inserted here by JavaScript -->
+</div>
+
+
+
+<!-- enquiry form -->
+
+<div class="form-container">
+   <form id="enquiryForm">
+       <h2>Enquiry Form</h2>
+       <div class="form-group">
+           <label for="name">Name</label>
+           <input type="text" id="name" name="name" required>
+       </div>
+       <div class="form-group">
+           <label for="email">Email</label>
+           <input type="email" id="email" name="email" required>
+       </div>
+       <div class="form-group">
+           <label for="phone">Phone</label>
+           <input type="tel" id="phone" name="phone" required>
+       </div>
+       <div class="form-group">
+           <label for="message">Message</label>
+           <textarea id="message" name="message" rows="4" required></textarea>
+       </div>
+       <div class="form-group">
+           <button type="submit" class="btn">Submit</button>
+       </div>
+   </form>
+</div>
+    
+</body>
+</html>
+
+
+<script src="script.js"></script>

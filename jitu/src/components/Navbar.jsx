@@ -34,7 +34,6 @@ const Nav = styled.nav`
   background-color: #81b1ce;
   color: white;
   padding: 10px;
-  
 `;
 
 const Container = styled.div`
@@ -49,7 +48,7 @@ const Brand = styled.div`
 `;
 
 const LogoImage = styled.img`
-  height: 70px;
+  height: 80px;
   margin-right: 10px;
   border-radius: 15px;
   width: 200px;

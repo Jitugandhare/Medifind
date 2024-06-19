@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { slideData } from './SlideData';
 
 const BannerWrapper = styled.div`
+  
   text-align: center;
   margin: 2px;
 `;
@@ -40,7 +41,7 @@ const Button = styled.button`
 `;
 
 const Paragraph = styled.p`
-  font-size: 1.2em;
+  font-size: 2em;
   margin: 10px 0;
   color: black;
 `;
@@ -66,7 +67,7 @@ const Banner = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prevImage) => (prevImage + 1) % slideData.length);
-    }, 5000);
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
 
