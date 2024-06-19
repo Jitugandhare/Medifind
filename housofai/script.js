@@ -127,6 +127,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+
+
+// our services
+
+document.querySelector('.view-more-btn').addEventListener('click', function() {
+    alert('View More clicked!');
+});
+
+
+
+
 // foooter section
 
 document.addEventListener('DOMContentLoaded', function() {

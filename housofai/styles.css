@@ -180,6 +180,111 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+
+@media (max-width: 768px) {
+    .slide img {
+        height: auto;  /* Ensures the image maintains its aspect ratio on smaller screens */
+    }
+
+    .dots {
+        padding: 5px 0;
+    }
+
+    .dot {
+        height: 10px;
+        width: 10px;
+    }
+}
+
+
+/* our services */
+
+.offers-section {
+    /* max-width: 1200px;
+     */
+     width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.section-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #090f1a;
+}
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    
+}
+
+.offer-card {
+    background-color: #1a3d7c;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    height: 50%;
+}
+
+.offer-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.offer-card p {
+    margin: 0;
+    font-size: 1em;
+}
+
+.offer-card:hover {
+    transform: translateY(-10px);
+}
+
+.view-more-container {
+    margin-top: 20px;
+}
+
+.view-more-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #1a3d7c;
+    background-color: white;
+    border: 2px solid #1a3d7c;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.view-more-btn:hover {
+    background-color: #1a3d7c;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .offers-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 10px;
+    }
+
+    .offer-card img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .section-title {
+        font-size: 1.5em;
+    }
+}
+
 /* why houseofai */
 .content-wrapper {
     max-width: 1200px;
@@ -213,7 +318,7 @@ h2 {
     width: 100px;
     height: 100px;
     margin-bottom: 10px;
-    cursor: pointer;
+    
 }
 
 .grid-item p {
