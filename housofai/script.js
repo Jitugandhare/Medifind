@@ -48,11 +48,11 @@ showSlide(slideIndex);
 // cards 
 const cardData = [
     { imgSrc: 'images/image-1.jpeg' },
-    { imgSrc: 'images/image-1.jpeg' },
-    { imgSrc: 'images/image-1.jpeg' },
-    { imgSrc: 'images/image-1.jpeg' },
-    { imgSrc: 'images/image-1.jpeg' },
-    { imgSrc: 'images/image-1.jpeg' },
+    { imgSrc: 'images/image-2.jpeg' },
+    { imgSrc: 'images/image-3.jpeg' },
+    { imgSrc: 'images/image-4.jpeg' },
+    { imgSrc: 'images/image-5.jpeg' },
+    { imgSrc: 'images/image-6.jpeg' },
 ];
 
 function createCard(imageSrc) {
