@@ -148,6 +148,7 @@ body {
 .slide {
     min-width: 100%;
     box-sizing: border-box;
+    position: relative;
 }
 
 .slide img {
@@ -156,6 +157,89 @@ body {
     display: block;
 }
 
+.slide-content {
+    position: absolute;
+    width: 70%;
+    bottom: 20px;
+    left: 20px;
+    /* background: rgba(0, 0, 0, 0.5); */
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.slide-content p {
+    margin: 0 0 10px 0;
+}
+
+.slide-content button {
+    background: #2a08c0;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    height: 50px;
+    width: 120px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: background 0.3s;
+}
+
+.slide-content button:hover {
+    background: #e68900;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .slide-content {
+        width: 80%;
+        left: 10px;
+        bottom: 15px;
+    }
+
+    .slide-content button {
+        height: 45px;
+        width: 110px;
+    }
+}
+
+@media (max-width: 768px) {
+    .slide-content {
+        width: 90%;
+        left: 5px;
+        bottom: 10px;
+        padding: 8px;
+    }
+
+    .slide-content p {
+        font-size: 14px;
+    }
+
+    .slide-content button {
+        height: 40px;
+        width: 100px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slide-content {
+        width: 95%;
+        left: 5px;
+        bottom: 5px;
+        padding: 5px;
+    }
+
+    .slide-content p {
+        font-size: 12px;
+    }
+
+    .slide-content button {
+        height: 35px;
+        width: 90px;
+        padding: 6px 10px;
+    }
+}
 
 
 /* our services */

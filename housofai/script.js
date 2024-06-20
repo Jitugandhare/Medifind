@@ -28,11 +28,16 @@ function currentSlide(index) {
     showSlide(index);
 }
 
+function buttonClick(index) {
+    alert(`Button ${index + 1} clicked!`);
+}
+
 // Auto slide
 setInterval(nextSlide, 3000);
 
 // Initial slide
 showSlide(slideIndex);
+
 
 
 
