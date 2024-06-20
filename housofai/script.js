@@ -5,24 +5,19 @@ function toggleMenu() {
 
 
 
-
 let slideIndex = 0;
 const slides = document.querySelector('.slides');
-const dots = document.querySelectorAll('.dot');
 
 function showSlide(index) {
     slideIndex = index;
 
-    if (slideIndex >= dots.length) {
+    if (slideIndex >= slides.children.length) {
         slideIndex = 0;
     } else if (slideIndex < 0) {
-        slideIndex = dots.length - 1;
+        slideIndex = slides.children.length - 1;
     }
 
     slides.style.transform = `translateX(-${slideIndex * 100}%)`;
-
-    dots.forEach(dot => dot.classList.remove('active'));
-    dots[slideIndex].classList.add('active');
 }
 
 function nextSlide() {
@@ -38,6 +33,7 @@ setInterval(nextSlide, 3000);
 
 // Initial slide
 showSlide(slideIndex);
+
 
 
 
