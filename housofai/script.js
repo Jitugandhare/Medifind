@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', renderCards);
 
 
 // enquiry form
-document.getElementById('enquiryForm').addEventListener('submit', function(event) {
+document.getElementById('enquiryForm').addEventListener('submit', function (event) {
     event.preventDefault();
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
@@ -94,35 +94,33 @@ document.getElementById('enquiryForm').addEventListener('submit', function(event
 
 // why housofai
 
-document.addEventListener('DOMContentLoaded', function() {
-    const cardData = [
-        { imgSrc: 'path/to/expert-counsellors.png', text: 'Expert Counsellors' },
-        { imgSrc: 'path/to/years-experience.png', text: '20 Years’ Experience' },
-        { imgSrc: 'path/to/successful-applications.png', text: '100 Percent Successful Applications' },
-        { imgSrc: 'path/to/acceptance-rates.png', text: 'Highest Acceptance Rates' },
-        { imgSrc: 'path/to/students-counselled.png', text: '15000+ Students Counselled' },
-        { imgSrc: 'path/to/personalised-attention.png', text: 'Personalised Attention' },
-    ];
+// document.addEventListener('DOMContentLoaded', function () {
+//     const cardData = [
+//         { text: 'Expert Counsellors' },
+//         { text: '20 Years’ Experience' },
+//         { text: '100 Percent Successful Applications' },
+//         { text: 'Highest Acceptance Rates' },
+//         { text: '15000+ Students Counselled' },
+//         { text: 'Personalised Attention' },
+//     ];
 
-    const gridContainer = document.querySelector('.grid-container');
+//     const gridContainer = document.querySelector('.grid-container');
 
-    cardData.forEach(data => {
-        const gridItem = document.createElement('div');
-        gridItem.className = 'grid-item';
-        
-        const img = document.createElement('img');
-        img.src = data.imgSrc;
-        img.alt = data.text;
-        
-        const p = document.createElement('p');
-        p.textContent = data.text;
+//     cardData.forEach(data => {
+//         const gridItem = document.createElement('div');
+//         gridItem.className = 'grid-item';
 
-        gridItem.appendChild(img);
-        gridItem.appendChild(p);
         
-        gridContainer.appendChild(gridItem);
-    });
-});
+
+//         const p = document.createElement('p');
+//         p.textContent = data.text;
+
+       
+//         gridItem.appendChild(p);
+
+//         gridContainer.appendChild(gridItem);
+//     });
+// });
 
 
 
@@ -132,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // our services
 
-document.querySelector('.view-more-btn').addEventListener('click', function() {
+document.querySelector('.view-more-btn').addEventListener('click', function () {
     alert('View More clicked!');
 });
 
@@ -141,8 +139,8 @@ document.querySelector('.view-more-btn').addEventListener('click', function() {
 
 // foooter section
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const yearSpan = document.createElement('span');
-    yearSpan.textContent = new Date().getFullYear();
+    // yearSpan.textContent = new Date().getFullYear();
     document.querySelector('.footer').appendChild(yearSpan);
 });
