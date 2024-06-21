@@ -247,11 +247,11 @@ body {
 .offers-section {
     /* max-width: 1200px;
      */
-     width: 80%;
+    width: 80%;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
-    
+
 }
 
 .section-title {
@@ -264,7 +264,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
-    
+
 }
 
 .offer-card {
@@ -333,7 +333,8 @@ body {
 
 .grid-item i {
     font-size: 80px;
-    color: #1c85af; /* You can change the color to match your design */
+    color: #1c85af;
+    /* You can change the color to match your design */
     margin-bottom: 10px;
 }
 
@@ -400,7 +401,7 @@ h2 {
     width: 100px;
     height: 100px;
     margin-bottom: 10px;
-    
+
 }
 
 .grid-item p {
@@ -425,17 +426,16 @@ h2 {
 
 /* enquiry form */
 
-
 .container {
     display: flex;
     flex-wrap: wrap;
-    max-width: 700px;
     width: 100%;
     box-sizing: border-box;
     margin: 20px;
 }
 
 .form-container {
+    width: 50%;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -445,9 +445,24 @@ h2 {
     box-sizing: border-box;
 }
 
-.map-container {
+.image-container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
     flex: 1;
     min-width: 300px;
+    box-sizing: border-box;
+}
+
+.image-container img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.map-container {
+    width: 100%;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -505,6 +520,9 @@ form h2 {
 
 
 
+
+
+
 /* footer section */
 
 
@@ -540,14 +558,15 @@ form h2 {
     color: #1f1616;
 }
 
-.footer-section p, .footer-section ul, .footer-section li {
+.footer-section p,
+.footer-section ul,
+.footer-section li {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-.footer-image img{
-    
-}
+
+.footer-image img {}
 
 .footer-section ul {
     margin-top: 10px;
