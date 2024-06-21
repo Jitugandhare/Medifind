@@ -125,6 +125,36 @@ document.getElementById('enquiryForm').addEventListener('submit', function (even
 
 
 
+// testimonial section
+
+let si = 0;
+        const slidees = document.querySelector('.testimonial-slider');
+
+        function soSides(index) {
+            si = index;
+
+            if (si >= slidees.children.length) {
+                si = 0;
+            } else if (si < 0) {
+                si = slidees.children.length - 1;
+            }
+
+            slidees.style.transform = `translateX(-${si * 100}%)`;
+        }
+
+        function ns() {
+            soSides(si + 1);
+        }
+
+        function ps() {
+            soSides(si - 1);
+        }
+
+        // Auto slide
+        setInterval(ns, 5000);
+
+        // Initial slide
+        soSides(si);
 
 
 
