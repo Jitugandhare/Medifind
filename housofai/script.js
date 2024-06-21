@@ -4,39 +4,38 @@ function toggleMenu() {
 }
 
 
-
 let slideIndex = 0;
-const slides = document.querySelector('.slides');
+        const slides = document.querySelector('.slides');
 
-function showSlide(index) {
-    slideIndex = index;
+        function showSlide(index) {
+            slideIndex = index;
 
-    if (slideIndex >= slides.children.length) {
-        slideIndex = 0;
-    } else if (slideIndex < 0) {
-        slideIndex = slides.children.length - 1;
-    }
+            if (slideIndex >= slides.children.length) {
+                slideIndex = 0;
+            } else if (slideIndex < 0) {
+                slideIndex = slides.children.length - 1;
+            }
 
-    slides.style.transform = `translateX(-${slideIndex * 100}%)`;
-}
+            slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+        }
 
-function nextSlide() {
-    showSlide(slideIndex + 1);
-}
+        function nextSlide() {
+            showSlide(slideIndex + 1);
+        }
 
-function currentSlide(index) {
-    showSlide(index);
-}
+        function currentSlide(index) {
+            showSlide(index);
+        }
 
-function buttonClick(index) {
-    alert(`Button ${index + 1} clicked!`);
-}
+        function buttonClick(index) {
+            alert(`Button ${index + 1} clicked!`);
+        }
 
-// Auto slide
-setInterval(nextSlide, 3000);
+        // Auto slide
+        setInterval(nextSlide, 3000);
 
-// Initial slide
-showSlide(slideIndex);
+        // Initial slide
+        showSlide(slideIndex);
 
 
 
