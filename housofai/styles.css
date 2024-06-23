@@ -363,7 +363,7 @@ body {
 
 
 
-/* our services */
+/* What We Offer... */
 
 .offers-section {
     /* max-width: 1200px;
@@ -568,7 +568,7 @@ h2 {
 }
 
 .image-container {
-
+    /* border: 1px solid red; */
     width: 50%;
     display: flex;
     align-items: center;
