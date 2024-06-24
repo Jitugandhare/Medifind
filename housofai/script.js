@@ -160,10 +160,20 @@ let si = 0;
 
 // our services
 
-document.querySelector('.view-more-btn').addEventListener('click', function () {
-    alert('View More clicked!');
-});
+document.addEventListener('DOMContentLoaded', function() {
+    var boxes = document.querySelectorAll('.box_main');
 
+    boxes.forEach(function(box) {
+        box.addEventListener('click', function() {
+            // Remove 'active' class from all boxes
+            boxes.forEach(function(b) {
+                b.classList.remove('active');
+            });
+            // Add 'active' class to the clicked box
+            box.classList.add('active');
+        });
+    });
+});
 
 
 
